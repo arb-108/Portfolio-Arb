@@ -523,6 +523,13 @@ footer {
   font-size: 0.8rem;
   font-weight: 300;
 }
+.fresult{
+  border:  1px solid var(--maincolor);
+  width: 100%;
+  padding: 8px;
+  border-radius: 5px;
+  display: none;
+}
 
 @media (max-width: 1440px) {
     .main_name {

@@ -6,6 +6,7 @@
     <title>Arb-108</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
+    
 </head>
 <body>
     
@@ -25,7 +26,7 @@
     </nav>
     <section class="hero">
         <div class="left">
-            <img src="./assests/pic1.jpg" alt="">
+            <img src="./assests/avatar.png" alt="">
         </div>
         <div class="right">
             <div class="name_section">
@@ -282,10 +283,20 @@
 </section>
 <footer>
     <div class="inquiry-form">
-        <form action="/send-inquiry" method="POST">
+        <!-- <form action="/send-inquiry" method="POST">
             <input type="text" name="name" placeholder="Your Name" required>
             <input type="email" name="email" placeholder="Your Email" required>
             <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Inquiry</button>
+        </form> -->
+        <form method="POST" id="form">
+
+            <div id="result" class="fresult"></div>
+            <input type="hidden" name="access_key" value="a8570a04-8d58-4ae0-8736-f808d73dd57c">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+            <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
             <button type="submit">Send Inquiry</button>
         </form>
     </div>
@@ -316,19 +327,6 @@
         </div>
     </div>
 </footer>
-
-
-
-    <script>
-        const menulist=document.getElementById("link_list");
-        menulist.style.maxHeight="0px";
-        function toggle(){
-            if(menulist.style.maxHeight=="0px"){
-                menulist.style.maxHeight="350px";
-            }else{
-                menulist.style.maxHeight="0px";
-            }
-        }
-    </script>
+    <script src="index.js"></script>
 </body>
 </html>
